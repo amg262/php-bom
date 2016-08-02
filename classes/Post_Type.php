@@ -39,3 +39,4 @@ class Post_Type
 $a = new Post_Type("Argument 1");
 $b = new Post_Type("Argument 1", "Argument 2");
 $b = new Post_Type("Argument 1", "Argument 2", "Argument 3");
+var_dump($b);

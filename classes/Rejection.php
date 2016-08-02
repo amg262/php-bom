@@ -6,17 +6,18 @@
  * Time: 1:37 AM
  */
 
-namespace WB_Objects;
-
 
 class Rejection
 {
     public static function factory1($arg1) {
+        print('hi');
+
     }
 
     public static function factory2($arg1, $arg2) {
+        return $arg2;
     }
 }
 
-$a = new Example::factory1("Argument 1");
-$b = new Example::factory2("Argument 1", "Argument 2");
+//$a = new Rejection::factory1("Argument 1");
+$b = new Rejection::factory2("Argument 1", "Argument 2");
