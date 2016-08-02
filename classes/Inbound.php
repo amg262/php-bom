@@ -6,8 +6,6 @@
  * Time: 1:36 AM
  */
 
-namespace WB_Objects;
-
 
 class Inbound
 {
