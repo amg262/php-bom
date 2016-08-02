@@ -34,7 +34,7 @@ $port = 8889;
 $link = mysqli_init();
 $con = mysqli_connect($host, $user,$password, $db, $port);
 //mysqli_close($link);
-$sql = 'CREATE TABLE `sandbox`.`bah` ( `yes` INT NOT NULL ) ENGINE = InnoDB;';
+$sql = 'CREATE TABLE `sandbox`.`basdssdsddh` ( `yes` INT NOT NULL ) ENGINE = InnoDB;';
 
 $var = mysqli_query($con, $sql);
 var_dump($var);
