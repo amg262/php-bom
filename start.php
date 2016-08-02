@@ -115,7 +115,7 @@ Po, vendor, outbound
  */
 include_once('classes/Part.php');
 
-include_once('classes/PO.php');
+include_once('classes/Purchase_Order.php');
 
 
 $po = new Part();
