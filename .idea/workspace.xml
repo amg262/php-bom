@@ -349,15 +349,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1470134949165</updated>
+<<<<<<< HEAD
+      <workItem from="1470134950816" duration="1464000" />
+=======
       <workItem from="1470134950816" duration="1396000" />
       <workItem from="1470137561103" duration="1293000" />
       <workItem from="1470139289570" duration="5555000" />
+<<<<<<< HEAD
       <workItem from="1470145505837" duration="333000" />
+=======
+      <workItem from="1470145505837" duration="252000" />
+>>>>>>> f9afc8b0b226a5c42c079c1de1cf411891e559cc
+>>>>>>> 690577bebfba95f191ce4ccf877bc400a502229a
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="8577000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="1464000" />
+=======
+    <option name="totallyTimeSpent" value="8496000" />
+>>>>>>> f9afc8b0b226a5c42c079c1de1cf411891e559cc
+>>>>>>> 690577bebfba95f191ce4ccf877bc400a502229a
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="978" extended-state="6" />
