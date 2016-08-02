@@ -1,13 +1,51 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: andy
  * Date: 8/2/16
- * Time: 1:34 AM
+ * Time: 7:07 AM
  */
-//include( '' )
+class _Pats
+{
 
-class Part
+}
+
+class _con
+{
+    public function __construct() {
+        $argv = func_get_args();
+        switch( func_num_args() ) {
+            case 1:
+                self::__construct1($argv[0]);
+                break;
+            case 2:
+                self::__construct2( $argv[0], $argv[1] );
+                break;
+            case 3:
+                self::__construct2( $argv[0], $argv[1], $argv[2] );
+        }
+    }
+
+    public function __construct1($arg1) {
+        // ...
+    }
+
+    public function __construct2($arg1, $arg2) {
+        //...
+    }
+
+    public function __construct3($arg1, $arg2, $arg3) {
+        // ...
+    }
+}
+
+$a = new Post_Type("Argument 1");
+$b = new Post_Type("Argument 1", "Argument 2");
+$b = new Post_Type("Argument 1", "Argument 2", "Argument 3");
+
+
+class _single
 {
     private static $instance;
     private $id, $part_no, $name, $desc, $cost;
@@ -60,7 +98,7 @@ class Part
     }
 }
 
-class SingletonChild extends Part
+class single_s extends _single
 {
 }
 
@@ -71,3 +109,18 @@ $anotherObj = SingletonChild::getInstance();
 var_dump($anotherObj === Part::getInstance());      // bool(false)
 
 var_dump($anotherObj === SingletonChild::getInstance()); // boo
+
+
+
+
+class _factory
+{
+    public static function factory1($arg1) {
+    }
+
+    public static function factory2($arg1, $arg2) {
+    }
+}
+
+$a = new Example::factory1("Argument 1");
+$b = new Example::factory2("Argument 1", "Argument 2");
