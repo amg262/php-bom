@@ -3,6 +3,7 @@
 include_once('classes/Part.php');
 include_once('classes/Subassembly.php');
 include_once('classes/Assembly.php');
+include_once('classes/Database.php');
 
 $one = new Part('1','one','one','1.00');
 $two = new Part('2','two','two','2.00');
@@ -25,7 +26,7 @@ $ass->setPart($sub_2, '1');
 
 var_dump($ass->getComponents());
 
-$user = 'root';
+/*$user = 'root';
 $password = 'root';
 $db = 'sandbox';
 $host = '127.0.0.1';
@@ -39,4 +40,8 @@ $sql = 'CREATE TABLE `sandbox`.`basdssdsddh` ( `yes` INT NOT NULL ) ENGINE = Inn
 $var = mysqli_query($con, $sql);
 var_dump($var);
 
-$con->close();
+$con->close();*/
+
+$db = new Database();
+$db->connect();
+$db->create_assembly();
