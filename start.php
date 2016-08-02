@@ -32,13 +32,11 @@ $host = '127.0.0.1';
 $port = 8889;
 
 $link = mysqli_init();
-$success = mysqli_real_connect(
-    $link,
-    $host,
-    $user,
-    $password,
-    $db,
-    $port
-);
+$con = mysqli_connect($host, $user,$password, $db, $port);
+//mysqli_close($link);
+$sql = 'CREATE TABLE `sandbox`.`bah` ( `yes` INT NOT NULL ) ENGINE = InnoDB;';
 
-var_dump(link);
+$var = mysqli_query($con, $sql);
+var_dump($var);
+
+$con->close();
