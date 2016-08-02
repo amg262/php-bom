@@ -14,10 +14,13 @@ $arr = array($one, $two, $tre, $for, $fiv);
 
 $sub = new Subassembly('2');
 $sub->setPart($one, '2');
-$sub->setPart($one, '2');
+//$sub->setPart($one, '2');
 $sub_2 = new Subassembly(('3'));
 $sub_2->setPart($for, '5');
 $sub_2->setPart($sub, '2');
 
+$ass = new Assembly('12');
+$ass->setPart($sub, '1');
+$ass->setPart($sub_2, '1');
 
-var_dump($sub_2->getComponents());
+var_dump($ass->getComponents());

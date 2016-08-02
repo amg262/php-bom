@@ -10,17 +10,21 @@
 
 class Assembly
 {
-    private $id, $name, $desc, $cost;
-    private $components;
+    private $id, $qty, $part;
+    private $components = array();
 
     /**
      * Subassembly constructor.
-     * @param $components
+     * @param $id
+     * @param $qty
+     * @param $part
      */
-    public function __construct($components)
+    public function __construct($id)
     {
-        $this->components = $components;
+        $this->id = $id;
+
     }
+
 
     /**
      * @return mixed
@@ -41,53 +45,39 @@ class Assembly
     /**
      * @return mixed
      */
-    public function getName()
+    public function getQty()
     {
-        return $this->name;
+        return $this->qty;
     }
 
     /**
-     * @param mixed $name
+     * @param mixed $qty
      */
-    public function setName($name)
+    public function setQty($qty)
     {
-        $this->name = $name;
+        $this->qty = $qty;
     }
 
     /**
      * @return mixed
      */
-    public function getDesc()
+    public function getPart()
     {
-        return $this->desc;
+        return $this->part;
     }
 
     /**
-     * @param mixed $desc
+     * @param mixed $part
      */
-    public function setDesc($desc)
+    public function setPart($part, $qty)
     {
-        $this->desc = $desc;
+        $this->part = $part;
+        $this->qty = $qty;
+        array_push( $this->components , array($this->getId(), array($this->part, $this->qty)));
     }
 
     /**
-     * @return mixed
-     */
-    public function getCost()
-    {
-        return $this->cost;
-    }
-
-    /**
-     * @param mixed $cost
-     */
-    public function setCost($cost)
-    {
-        $this->cost = $cost;
-    }
-
-    /**
-     * @return mixed
+     * @return array
      */
     public function getComponents()
     {
@@ -95,10 +85,11 @@ class Assembly
     }
 
     /**
-     * @param mixed $components
+     * @param array $components
      */
     public function setComponents($components)
     {
         $this->components = $components;
     }
+
 }
