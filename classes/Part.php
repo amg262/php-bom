@@ -5,17 +5,17 @@
  * Date: 8/2/16
  * Time: 1:34 AM
  */
-include( '' )
+//include( '' )
 
 class Part
 {
+    private static $instance;
     private $id, $part_no, $name, $desc, $cost;
     private $attr = array();
     private $vendor;
     /**
      * @var Singleton The reference to *Singleton* instance of this class
      */
-    private static $instance;
 
     /**
      * Returns the *Singleton* instance of this class.
