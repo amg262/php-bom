@@ -24,3 +24,21 @@ $ass->setPart($sub, '1');
 $ass->setPart($sub_2, '1');
 
 var_dump($ass->getComponents());
+
+$user = 'root';
+$password = 'root';
+$db = 'sandbox';
+$host = '127.0.0.1';
+$port = 8889;
+
+$link = mysqli_init();
+$success = mysqli_real_connect(
+    $link,
+    $host,
+    $user,
+    $password,
+    $db,
+    $port
+);
+
+var_dump(link);
