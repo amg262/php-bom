@@ -6,8 +6,6 @@
  * Time: 1:35 AM
  */
 
-namespace WB_Objects;
-
 
 class Vendor
 {

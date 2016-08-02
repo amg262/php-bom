@@ -5,69 +5,87 @@
  * Date: 8/2/16
  * Time: 1:34 AM
  */
-//include( '' )
-
-class Part
-{
-    private $id, $part_no, $name, $desc, $cost;
-    private $attr = array();
-    private $vendor;
-    /**
-     * @var Singleton The reference to *Singleton* instance of this class
-     */
-    private static $instance = null;
+class Part {
+    private $id, $name, $desc, $cost;
 
     /**
-     * Returns the *Singleton* instance of this class.
-     *
-     * @return Singleton The *Singleton* instance.
+     * Part constructor.
+     * @param $id
+     * @param $name
+     * @param $desc
+     * @param $cost
      */
-    public static function getInstance()
+    public function __construct($id, $name, $desc, $cost)
     {
-        if (null === static::$instance) {
-            static::$instance = new static();
-        }
-
-        return static::$instance;
+        $this->id = $id;
+        $this->name = $name;
+        $this->desc = $desc;
+        $this->cost = $cost;
     }
 
     /**
-     * Protected constructor to prevent creating a new instance of the
-     * *Singleton* via the `new` operator from outside of this class.
+     * @return mixed
      */
-    protected function __construct()
+    public function getId()
     {
+        return $this->id;
     }
 
     /**
-     * Private clone method to prevent cloning of the instance of the
-     * *Singleton* instance.
-     *
-     * @return void
+     * @param mixed $id
      */
-    private function __clone()
+    public function setId($id)
     {
+        $this->id = $id;
     }
 
     /**
-     * Private unserialize method to prevent unserializing of the *Singleton*
-     * instance.
-     *
-     * @return void
+     * @return mixed
      */
-    private function __wakeup()
+    public function getName()
     {
+        return $this->name;
     }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDesc()
+    {
+        return $this->desc;
+    }
+
+    /**
+     * @param mixed $desc
+     */
+    public function setDesc($desc)
+    {
+        $this->desc = $desc;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCost()
+    {
+        return $this->cost;
+    }
+
+    /**
+     * @param mixed $cost
+     */
+    public function setCost($cost)
+    {
+        $this->cost = $cost;
+    }
+
+
 }
-
-class SingletonChild extends Part
-{
-}
-
-$obj = Part::getInstance();
-var_dump($obj === Part::getInstance());             // bool(true)
-
-$anotherObj = SingletonChild::getInstance();
-var_dump($anotherObj === Part::getInstance());      // bool(false)
-
-var_dump($anotherObj === SingletonChild::getInstance()); // boo
