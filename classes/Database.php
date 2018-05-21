@@ -10,8 +10,8 @@ class Database
 {
     private $user = 'root';
     private $password = 'root';
-    private $db = 'sandbox';
-    private $host = '127.0.0.1';
+    private $db = 'phpbom';
+    private $host = 'localhost';
     private $port = 3306;
     private $link, $con;
 
